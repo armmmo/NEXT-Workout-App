@@ -48,7 +48,7 @@ const Home = () => {
 
   useEffect(() => {
     if (!user) {
-      router.push("/");
+      router.push("/login");
     }
 
     // return () => router.push("/");

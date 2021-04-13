@@ -32,7 +32,7 @@ const AuthProvider = ({ children }) => {
         loading,
         logout: () => {
           auth.signOut();
-          router.push("/");
+          router.push("/login");
         },
       }}
     >
