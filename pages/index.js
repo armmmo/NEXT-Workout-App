@@ -78,15 +78,7 @@ const Home = () => {
             handleDateChange={handleDateChange}
             highlightDates={uniq?.map((date) => new Date(date))} //maps the uniq array according to desired output
           />
-          <DatePicker
-            selected={startDate}
-            onChange={handleDateChange}
-            name="startDate"
-            dateFormat="PPPP"
-            closeOnScroll={true}
-            customInput={<DateButton />}
-            highlightDates={uniq?.map((date) => new Date(date))}
-          />
+          
           <Main
             selectedDate={formattedDate}
             handleDateChange={handleDateChange}

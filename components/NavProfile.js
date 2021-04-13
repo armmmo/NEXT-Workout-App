@@ -51,7 +51,7 @@ const Nav = ({ handleDateChange, selectedDate, highlightDates }) => {
               <div
                 className="flex-shrink-0 cursor-pointer"
                 onClick={() => {
-                  router.push("/home");
+                  router.push("/");
                 }}
               >
                 <LiftLogo />
@@ -62,7 +62,7 @@ const Nav = ({ handleDateChange, selectedDate, highlightDates }) => {
                   <a
                     aria-label="Home"
                     onClick={() => {
-                      router.push("/home");
+                      router.push("/");
                     }}
                     className="cursor-pointer dark:text-gray-300 text-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
@@ -131,7 +131,7 @@ const Nav = ({ handleDateChange, selectedDate, highlightDates }) => {
                         tabIndex="0"
                         onClick={() => router.push("/profile")}
                       >
-                        Profile
+                        Perfil
                       </a>
 
                       <a
@@ -143,15 +143,7 @@ const Nav = ({ handleDateChange, selectedDate, highlightDates }) => {
                       >
                         Sign out
                       </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm  hover:bg-gray-100 dark:hover:bg-gray-800"
-                        role="menuitem"
-                        tabIndex="0"
-                        onClick={openDeleteModal}
-                      >
-                        Delete account
-                      </a>
+                      
                     </div>
                   </Transition>
                   <DeleteAccountModal
