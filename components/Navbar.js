@@ -51,41 +51,13 @@ const Nav = ({ handleDateChange, selectedDate, highlightDates }) => {
               <div
                 className="flex-shrink-0 cursor-pointer"
                 onClick={() => {
-                  router.push("/home");
+                  router.push("/");
                 }}
               >
                 <LiftLogo />
               </div>
 
-              <div className="md:block">
-                <div className="ml-8 flex items-baseline space-x-4">
-                  <a
-                    aria-label="Home"
-                    onClick={() => {
-                      router.push("/home");
-                    }}
-                    className="cursor-pointer dark:text-gray-300 text-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    <Home aria-label="Home" />
-                  </a>
-
-                  <DatePicker
-                    aria-label="Calender"
-                    selected={selectedDate}
-                    onChange={handleDateChange}
-                    highlightDates={highlightDates}
-                    name="startDate"
-                    dateFormat="MMM dd, yyyy"
-                    closeOnScroll={true}
-                    withPortal
-                    customInput={
-                      <div className="cursor-pointer dark:text-gray-300 text-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                        <Calender />
-                      </div>
-                    }
-                  />
-                </div>
-              </div>
+              
             </div>
             <div className=" md:block">
               <div className="ml-4 flex items-center md:ml-6">
@@ -147,7 +119,7 @@ const Nav = ({ handleDateChange, selectedDate, highlightDates }) => {
                         tabIndex="0"
                         onClick={() => router.push("/profile")}
                       >
-                        Profile
+                        Perfil
                       </a>
 
                       <a
@@ -157,17 +129,9 @@ const Nav = ({ handleDateChange, selectedDate, highlightDates }) => {
                         tabIndex="0"
                         onClick={logout}
                       >
-                        Sign out
+                        Sair
                       </a>
-                      <a
-                        href="#"
-                        className="block px-4 py-2 text-sm  hover:bg-gray-100 dark:hover:bg-gray-800"
-                        role="menuitem"
-                        tabIndex="0"
-                        onClick={openDeleteModal}
-                      >
-                        Delete account
-                      </a>
+                      {/* <a href="#"  className="block px-4 py-2 text-sm  hover:bg-gray-100 dark:hover:bg-gray-800" role="menuitem" tabIndex="0" onClick={openDeleteModal}> Delete account </a> */}
                     </div>
                   </Transition>
                   <DeleteAccountModal
