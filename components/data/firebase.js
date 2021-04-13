@@ -33,7 +33,6 @@ const uiConfig = {
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
   ],
-  credentialHelper: firebase.auth.CredentialHelper.GOOGLE_YOLO,
   callbacks: {
     // Avoid redirects after sign-in.
     signInSuccessWithAuthResult: () => false,
